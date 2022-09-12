@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menuProfile"
+        android:icon="@drawable/profile"
+        android:title="@string/profile"/>
+
+    <item android:id="@+id/menuNotification"
+        android:icon="@drawable/search"
+        android:title="@string/choose_a_specialty"/>
+
+    <item android:id="@+id/menuOrder"
+        android:icon="@drawable/order"
+        android:title="@string/book_an_appointment"/>
+
+    <item android:id="@+id/menuInbox"
+        android:icon="@drawable/inbox"
+        android:title="@string/my_appoinments"/>
+
+    <item android:title="@string/others">
+        <menu>
+            <item android:id="@+id/menuSetting"
+                android:icon="@drawable/support"
+                android:title="Contact Us"/>
+
+
+            <item android:id="@+id/menuAbout"
+                android:icon="@drawable/about"
+                android:title="@string/about"/>
+
+        </menu>
+
+    </item>
+</menu>

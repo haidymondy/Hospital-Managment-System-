@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuProfile">
+
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="com.example.hms.Fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/menuNotification"
+        android:name="com.example.hms.Fragments.SearchFragment"
+        android:label="Choose a specialty"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/menuSetting"
+        android:name="com.example.hms.Fragments.ContactFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/menuInbox"
+        android:name="com.example.hms.Fragments.InboxFragment"
+        android:label="My Appointments"
+        tools:layout="@layout/fragment_inbox" />
+    <fragment
+        android:id="@+id/menuOrder"
+        android:name="com.example.hms.Fragments.OrderFragment"
+        android:label="Book an Appointment"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/menuAbout"
+        android:name="com.example.hms.Fragments.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+</navigation>

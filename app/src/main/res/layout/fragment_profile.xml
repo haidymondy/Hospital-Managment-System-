@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hms_background"
+    tools:context=".Fragments.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/teal_200"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@color/teal_200"
+            android:padding="20dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false"
+                android:text="@string/mostafa_mohamed"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_border"
+            android:backgroundTint="@color/white">
+
+            <ImageView
+                android:id="@+id/o2"
+                android:layout_width="37dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/success"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/o"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submit"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/o"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="120dp"
+                android:text="Updated Successfully "
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/o2"
+                app:layout_constraintTop_toBottomOf="@+id/submit" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit"
+                style="@android:style/Widget.Button"
+                android:layout_width="357dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edittext_border"
+                android:backgroundTint="#00CCCB"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="8sp"
+                android:text="Save Changes"
+                android:textAlignment="center"
+                android:textColor="#040404"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/Email_change"
+                app:layout_constraintTop_toBottomOf="@+id/Profile_password"
+                tools:text="Save Changes" />
+
+            <ImageView
+                android:id="@+id/Email_change"
+                android:layout_width="51dp"
+                android:layout_height="63dp"
+
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="55dp"
+                app:layout_constraintEnd_toEndOf="@+id/email_editText"
+                app:layout_constraintEnd_toStartOf="@+id/email_editText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/email" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_editText"
+                android:layout_width="315dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="66dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="30dp"
+                android:cursorVisible="false"
+                android:editable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:freezesText="false"
+                android:hint="@string/email"
+                android:minHeight="48dp"
+                android:paddingLeft="20sp"
+
+                android:textColor="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/profile_username"
+                android:layout_width="315dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="66dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:focusable="false"
+                android:freezesText="false"
+                android:hint="@string/username"
+                android:inputType="textPersonName"
+                android:paddingLeft="20sp"
+                android:text="Email"
+
+                android:textColor="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_editText" />
+
+            <ImageView
+                android:id="@+id/UserName_change"
+                android:layout_width="50dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/useri"
+                app:layout_constraintEnd_toEndOf="@+id/profile_username"
+                app:layout_constraintHorizontal_bias="0.006"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Email_change" />
+
+            <EditText
+                android:id="@+id/Profile_role"
+                android:layout_width="315dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="66dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:focusable="false"
+                android:freezesText="false"
+                android:hint="Gender"
+                android:inputType="textPersonName"
+
+                android:paddingLeft="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_username" />
+
+            <ImageView
+                android:id="@+id/Role_change"
+                android:layout_width="44dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/role"
+                app:layout_constraintEnd_toEndOf="@+id/Profile_role"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UserName_change" />
+
+            <EditText
+                android:id="@+id/Profile_password"
+                android:layout_width="315dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="66dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:focusable="false"
+
+                android:freezesText="false"
+                android:hint="@string/password"
+                android:inputType="textPersonName"
+                android:paddingLeft="20sp"
+                android:textColor="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Profile_role" />
+
+            <ImageView
+                android:id="@+id/Password_change"
+                android:layout_width="52dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/passwordi"
+                app:layout_constraintBottom_toTopOf="@+id/submit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Profile_role" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
